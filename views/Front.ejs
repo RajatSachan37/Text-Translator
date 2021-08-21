@@ -1,0 +1,126 @@
+<html>
+   <head>
+       <title>Text Translation Application</title>
+
+       <!-- Link to bootstrap cdn -->
+       <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+       <!-- Linking main.css file -->
+        <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+   </head> 
+<body>
+
+<div class="container">
+
+    <!-- Front page heading -->
+    <div class="jumbotron">
+        <h1 id="heading">Text Translation Application</h1>
+    </div>
+
+    <!-- Sending GET request to API call route with input parameters -->
+<form id="translate" action="/query" method="GET">
+
+    <!-- inputText textarea -->
+    <div class="form-group">
+    <textarea name="translate" id="translate" placeholder="Enter text to translate" class="form-control" rows="8" required></textarea>
+</div>
+
+<!-- Source language Selection menu -->
+<div class="form-group">
+    <label for="from">
+        Translate from:
+        <select name="from" id="from">
+            <option value="en" selected hidden>Select</option>
+            <option value="en">English</option>
+            <option value="hi">Hindi</option>
+            <option value="bn">Bengali</option>
+            <option value="gu">Gujarati</option>
+            <option value="ne">Nepali</option>
+            <option value="ta">Tamil</option>
+            <option value="te">Telugu</option>
+            <option value="ur">Urdu</option>
+            <option value="es">Spanish</option>
+            <option value="ar">Arabic</option>
+            <option value="fr">French</option>
+            <option value="ru">Russian</option>
+            <option value="pt">Portuguese</option>
+            <option value="id">Indonesian</option>
+            <option value="zh">Chinese</option>
+            <option value="vi">Vietnamese</option>
+            <option value="it">Italian</option>
+            <option value="ja">Japanese</option>
+            <option value="ko">Korean</option>
+            <option value="tr">Turkish</option>
+            <option value="ro">Romanian</option>
+            <option value="pl">Polish</option>
+            
+        </select>
+    </label>
+
+    <!-- Target language Selection menu -->
+    <label for="to" class="pull-right">
+        Translate to:
+        <select name="to" id="to">
+            <option value="hi" selected hidden>Select</option>
+            <option value="hi">Hindi</option>
+            <option value="en">English</option>
+            <option value="bn">Bengali</option>
+            <option value="gu">Gujarati</option>
+            <option value="ne">Nepali</option>
+            <option value="ta">Tamil</option>
+            <option value="te">Telugu</option>
+            <option value="ur">Urdu</option>
+            <option value="es">Spanish</option>
+            <option value="ar">Arabic</option>
+            <option value="fr">French</option>
+            <option value="ru">Russian</option>
+            <option value="pt">Portuguese</option>
+            <option value="id">Indonesian</option>
+            <option value="zh">Chinese</option>
+            <option value="vi">Vietnamese</option>
+            <option value="it">Italian</option>
+            <option value="ja">Japanese</option>
+            <option value="ko">Korean</option>
+            <option value="tr">Turkish</option>
+            <option value="ro">Romanian</option>
+            <option value="pl">Polish</option>
+        </select>
+    </label>
+</div>
+    
+        <!-- Translate button -->
+        <div class="row">
+            <div class="col-md-8 col-xs-offset-2"> 
+               <Button class="btn btn-primary btn-lg btn-block">Translate</Button>
+            </div>
+        </div>
+    
+</form>
+
+</div>
+
+<!-- link to jQuery cdn -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script> 
+
+<!-- link to bootstrap's JavaScript cdn -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!-- JavaScript code to prevent selection of same source and target language -->
+<script>
+    //    Preventing selection of same options
+    $(document).ready(function(){  
+    
+    $("select").on('focus', function () {
+          $("select").find("option[value='"+ $(this).val() + "']").attr('disabled', false);
+      }).change(function() {
+    
+          $("select").not(this).find("option[value='"+ $(this).val() + "']").attr('disabled', true);
+    
+      });
+    
+    
+    }); 
+    </script>
+
+</body>
+</html>
