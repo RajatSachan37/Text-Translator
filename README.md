@@ -9,10 +9,10 @@ It is a Web Application which translate text from one language to another.
 * CSS
 * Bootstrap
 * JavaScript
-* EJS
 * jQuery
 * Node.js
 * Express.js
+* EJS
 * IBM Watson Language Translator API
 * MySQL Database
 * Jest & SuperTest (for testing of application)
