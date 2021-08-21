@@ -9,7 +9,7 @@ It is a Web Application which translate text from one language to another.
 * CSS
 * Bootstrap
 * JavaScript
-* ejs
+* EJS
 * jQuery
 * Node.js
 * Express.js
