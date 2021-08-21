@@ -8,7 +8,8 @@ It is a Web Application which translate text from one language to another.
 * HTML                                              
 * CSS
 * Bootstrap
-* Embedded JavaScript
+* JavaScript
+* ejs
 * jQuery
 * Node.js
 * Express.js
