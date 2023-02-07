@@ -1,7 +1,8 @@
 
 # Text Translation Application
 
-It is a Web Application which translate text from one language to another.
+It is a Web Application which translate text from one language to another.\
+Deployed Link: https://text-translator.cyclic.app/
 
 ## Tools/Technologies Used
 
